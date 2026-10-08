@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastrar Cliente - O brownie Mania{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5 mb-5">
+    <div class="card shadow-sm cadastro-card">
+        <div class="card-body p-4">
+
+            <h1 class="mb-2">Cadastro de Cliente</h1>
+            <p class="text-muted mb-4">
+                Preencha os dados para cadastrar um novo cliente.
+            </p>
+
+            <form method="POST">
+
+                <!-- Nome -->
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="nome"
+                        name="nome"
+                        required>
+                </div>
+
+                <!-- Telefone -->
+                <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="telefone"
+                        name="telefone"
+                        required>
+                </div>
+
+                <!-- Data de nascimento -->
+                <div class="mb-3">
+                    <label for="data_nascimento" class="form-label">
+                        Data de nascimento
+                    </label>
+                    <input
+                        type="date"
+                        class="form-control"
+                        id="data_nascimento"
+                        name="data_nascimento"
+                        required>
+                </div>
+
+                <!-- Logradouro -->
+                <div class="mb-3">
+                    <label for="logradouro" class="form-label">
+                        Logradouro
+                    </label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="logradouro"
+                        name="logradouro"
+                        required>
+                </div>
+
+                <!-- Bairro -->
+                <div class="mb-3">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="bairro"
+                        name="bairro"
+                        required>
+                </div>
+
+                <!-- Complemento e Número -->
+                <div class="row">
+
+                    <div class="col-md-8 mb-3">
+                        <label for="complemento" class="form-label">
+                            Complemento
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="complemento"
+                            name="complemento">
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <label for="numero" class="form-label">
+                            Número
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="numero"
+                            name="numero"
+                            required>
+                    </div>
+
+                </div>
+
+                <!-- CEP -->
+                <div class="mb-3">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="cep"
+                        name="cep"
+                        required>
+                </div>
+
+                <!-- Cidade -->
+                <div class="mb-3">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="cidade"
+                        name="cidade"
+                        required>
+                </div>
+
+                <!-- Estado -->
+                <div class="mb-3">
+                    <label for="estado" class="form-label">Estado</label>
+
+                    <select
+                        class="form-select"
+                        id="estado"
+                        name="estado"
+                        required>
+
+                        <option value="">Selecione o estado</option>
+
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+
+                    </select>
+                </div>
+
+                <!-- E-mail -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        required>
+                </div>
+
+                <!-- Senha e confirmação -->
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label for="senha" class="form-label">
+                            Senha
+                        </label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="senha"
+                            name="senha"
+                            required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="confirmar_senha" class="form-label">
+                            Confirmar senha
+                        </label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            id="confirmar_senha"
+                            name="confirmar_senha"
+                            required>
+                    </div>
+
+                </div>
+
+                <!-- Botões -->
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">
+                        Cadastrar
+                    </button>
+
+                    <a href="{{ url_for('listagem') }}"
+                       class="btn btn-outline-secondary">
+                        Ver clientes
+                    </a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

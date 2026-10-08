@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Encomendas - O brownie Mania{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <h2>Encomendas</h2>
+
+        <p>
+            Encomendas registradas na loja.
+        </p>
+
+    </div>
+
+    <a href="{{ url_for('cadastrar_encomenda') }}"
+       class="btn btn-brownie">
+
+        + Nova encomenda
+
+    </a>
+
+</div>
+
+
+<div class="table-card">
+
+    <div class="table-responsive">
+
+        <table class="table table-hover align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Nome do cliente</th>
+                    <th>Produto</th>
+                    <th>Data de entrega</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for item in encomendas %}
+
+                <tr>
+
+                    <td>{{ item["id"] }}</td>
+
+                    <td>{{ item["nome"] }}</td>
+
+                    <td>{{ item["produto"] }}</td>
+
+                    <td>{{ item["data_entrega"] }}</td>
+
+                </tr>
+
+                {% else %}
+
+                <tr>
+
+                    <td colspan="4"
+                        class="text-center">
+
+                        Nenhuma encomenda cadastrada.
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

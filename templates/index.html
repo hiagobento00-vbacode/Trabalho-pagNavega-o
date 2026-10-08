@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Início - O brownie Mania{% endblock %}
+
+{% block content %}
+
+<div class="hero text-center">
+
+    <div class="hero-cookie">
+        🍪
+    </div>
+
+    <h1>
+        Bem-vindo ao
+        <span>O brownie Mania!</span>
+    </h1>
+
+    <p class="lead">
+        Brownies, cookies e encomendas feitos com muito carinho.
+    </p>
+
+
+    <div class="row g-4 mt-4">
+
+        <div class="col-md-4">
+
+            <div class="home-card">
+
+                <h3>👤 Clientes</h3>
+
+                <p>
+                    Cadastre e consulte os clientes da loja.
+                </p>
+
+                <a href="{{ url_for('listagem') }}"
+                   class="btn btn-brownie">
+
+                    Ver clientes
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="home-card">
+
+                <h3>💡 Sugestões</h3>
+
+                <p>
+                    Confira as sugestões dos nossos clientes.
+                </p>
+
+                <a href="{{ url_for('listar_sugestao') }}"
+                   class="btn btn-brownie">
+
+                    Ver sugestões
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            <div class="home-card">
+
+                <h3>📦 Encomendas</h3>
+
+                <p>
+                    Gerencie as encomendas da loja.
+                </p>
+
+                <a href="{{ url_for('listar_encomenda') }}"
+                   class="btn btn-brownie">
+
+                    Ver encomendas
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

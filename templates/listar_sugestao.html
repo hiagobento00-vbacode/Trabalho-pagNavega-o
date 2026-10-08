@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Sugestões - O brownie Mania{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <h2>Sugestões</h2>
+
+        <p>
+            Sugestões enviadas pelos clientes.
+        </p>
+
+    </div>
+
+    <a href="{{ url_for('cadastrar_sugestao') }}"
+       class="btn btn-brownie">
+
+        + Nova sugestão
+
+    </a>
+
+</div>
+
+
+<div class="table-card">
+
+    <div class="table-responsive">
+
+        <table class="table table-hover align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sugestão</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for item in sugestoes %}
+
+                <tr>
+
+                    <td>{{ item["id"] }}</td>
+
+                    <td>{{ item["nome"] }}</td>
+
+                    <td>{{ item["sugestao"] }}</td>
+
+                </tr>
+
+                {% else %}
+
+                <tr>
+
+                    <td colspan="3"
+                        class="text-center">
+
+                        Nenhuma sugestão cadastrada.
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

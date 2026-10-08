@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}Clientes - O brownie Mania{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+
+    <div>
+
+        <h2>Clientes cadastrados</h2>
+
+        <p>
+            Lista de clientes da O brownie Mania.
+        </p>
+
+    </div>
+
+    <a href="{{ url_for('cadastrar') }}"
+       class="btn btn-brownie">
+
+        + Novo cliente
+
+    </a>
+
+</div>
+
+
+<div class="table-card">
+
+    <div class="table-responsive">
+
+        <table class="table table-hover align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for usuario in usuarios %}
+
+                <tr>
+
+                    <td>{{ usuario["id"] }}</td>
+
+                    <td>{{ usuario["nome"] }}</td>
+
+                    <td>{{ usuario["email"] }}</td>
+
+                </tr>
+
+                {% else %}
+
+                <tr>
+
+                    <td colspan="3"
+                        class="text-center">
+
+                        Nenhum cliente cadastrado.
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
