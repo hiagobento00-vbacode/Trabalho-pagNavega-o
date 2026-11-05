@@ -12,6 +12,12 @@ body {
     color: #432c26;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main.container {
+    flex: 1;
 }
 
 .navbar-brownie {
@@ -129,11 +135,13 @@ footer {
     text-align: center;
     padding: 25px;
     color: #806b62;
+    margin-top: auto;
 }
 
 .login-page {
     background: linear-gradient(135deg, var(--rosa-claro), var(--marrom-claro));
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
